@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Life — Our Programs</title>
+  <meta name="description" content="Discover student life and programs: Cybersecurity, STEM pedagogy, IT & Business, and Software Engineering." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header fixed-top" role="banner">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/my-logo.png" alt="Logo" height="36" class="me-2">
+          <span class="brand-title">Our College</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About / Programs</a></li>
+            <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+            <li class="nav-item"><a class="nav-link active" href="student-life.html">Student Life</a></li>
+            <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-3" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="site-main pt-5 mt-5" tabindex="-1">
+    <section class="py-5">
+      <div class="container">
+        <header class="mb-5 text-center">
+          <h1 class="display-6">Student Life & Programs</h1>
+          <p class="text-muted small">Explore our vibrant campus, clubs, events, and our programs in Cybersecurity, STEM pedagogy, IT & Business, and Software Engineering.</p>
+        </header>
+
+        <!-- Filter Buttons -->
+        <div class="mb-4 text-center">
+          <button class="btn btn-sm btn-outline-primary me-2 filter-btn" data-type="all">All</button>
+          <button class="btn btn-sm btn-outline-primary me-2 filter-btn" data-type="clubs">Clubs</button>
+          <button class="btn btn-sm btn-outline-primary me-2 filter-btn" data-type="events">Events</button>
+          <button class="btn btn-sm btn-outline-primary me-2 filter-btn" data-type="programs">Programs</button>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="row g-4" id="lifeCards">
+          <!-- Clubs -->
+          <div class="col-md-6 life-card" data-type="clubs">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">Tech Club</h5>
+              <p class="card-text small text-muted">Work on hands-on tech projects, coding challenges, and collaborative learning activities.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalTechClub">More Info</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 life-card" data-type="clubs">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">Innovation Club</h5>
+              <p class="card-text small text-muted">Develop creative ideas, explore STEM concepts, and participate in maker activities.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalInnovationClub">More Info</button>
+            </div>
+          </div>
+
+          <!-- Events -->
+          <div class="col-md-6 life-card" data-type="events">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">Annual Hackathon</h5>
+              <p class="card-text small text-muted">Students collaborate in 48 hours to solve real-world problems.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalHackathon">More Info</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 life-card" data-type="events">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">Cultural Festival</h5>
+              <p class="card-text small text-muted">Celebrate diversity with music, art, and performances by students.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalFestival">More Info</button>
+            </div>
+          </div>
+
+          <!-- Programs -->
+          <div class="col-md-6 life-card" data-type="programs">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">Cybersecurity</h5>
+              <p class="card-text small text-muted">Learn to protect systems, networks, and data from cyber threats.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalCybersecurity">More Info</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 life-card" data-type="programs">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">STEM Pedagogy</h5>
+              <p class="card-text small text-muted">Focus on teaching STEM subjects effectively with innovative methods.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalSTEM">More Info</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 life-card" data-type="programs">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">IT & Business</h5>
+              <p class="card-text small text-muted">Combine technology and business skills to solve real-world problems.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalITBusiness">More Info</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 life-card" data-type="programs">
+            <div class="card h-100 shadow-sm p-3">
+              <h5 class="card-title">Software Engineering</h5>
+              <p class="card-text small text-muted">Learn modern software development, design patterns, and collaborative projects.</p>
+              <button class="btn btn-sm btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalSoftware">More Info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <!-- Tech Club Modal -->
+  <div class="modal fade" id="modalTechClub" tabindex="-1" aria-labelledby="modalTechClubLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTechClubLabel">Tech Club</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The Tech Club focuses on coding challenges, robotics projects, hackathons, and collaborative tech activities. Students gain hands-on experience in software and hardware projects.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Innovation Club Modal -->
+  <div class="modal fade" id="modalInnovationClub" tabindex="-1" aria-labelledby="modalInnovationClubLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalInnovationClubLabel">Innovation Club</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The Innovation Club encourages students to explore STEM concepts, create innovative projects, and participate in maker activities and competitions.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hackathon Modal -->
+  <div class="modal fade" id="modalHackathon" tabindex="-1" aria-labelledby="modalHackathonLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalHackathonLabel">Annual Hackathon</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The Annual Hackathon brings students together to solve real-world challenges within 48 hours. Teams collaborate and innovate under time constraints.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cultural Festival Modal -->
+  <div class="modal fade" id="modalFestival" tabindex="-1" aria-labelledby="modalFestivalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFestivalLabel">Cultural Festival</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The Cultural Festival celebrates diversity on campus through music, art, performances, and interactive activities organized by students.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cybersecurity Modal -->
+  <div class="modal fade" id="modalCybersecurity" tabindex="-1" aria-labelledby="modalCybersecurityLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCybersecurityLabel">Cybersecurity Program</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The Cybersecurity program trains students to secure networks, prevent cyber attacks, and implement advanced protection strategies. Students will work on real-world projects, penetration testing, and threat analysis simulations.</p>
+          <ul>
+            <li>Network Security</li>
+            <li>Ethical Hacking & Pen Testing</li>
+            <li>Cryptography & Data Protection</li>
+            <li>Incident Response & Risk Management</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEM Pedagogy Modal -->
+  <div class="modal fade" id="modalSTEM" tabindex="-1" aria-labelledby="modalSTEMLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSTEMLabel">STEM Pedagogy Program</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The STEM Pedagogy program focuses on effective teaching strategies for STEM subjects, promoting hands-on learning and critical thinking among students.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IT & Business Modal -->
+  <div class="modal fade" id="modalITBusiness" tabindex="-1" aria-labelledby="modalITBusinessLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalITBusinessLabel">IT & Business Program</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The IT & Business program equips students with combined technical and business skills, preparing them to solve real-world business challenges using technology.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Software Engineering Modal -->
+  <div class="modal fade" id="modalSoftware" tabindex="-1" aria-labelledby="modalSoftwareLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSoftwareLabel">Software Engineering Program</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>The Software Engineering program teaches modern software development practices, design patterns, collaborative project management, and real-world application deployment.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+ <footer class="site-footer py-4 bg-white border-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-muted small">
+          © <span id="currentYear"></span> Engineering College — All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Filter JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.life-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const type = btn.getAttribute('data-type');
+          cards.forEach(card => {
+            if(type === 'all' || card.getAttribute('data-type') === type){
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
