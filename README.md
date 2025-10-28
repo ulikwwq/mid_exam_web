@@ -82,8 +82,6 @@ Home: Overview and hero section
 
 About / Programs: Learn about available programs
 
-Admissions: View application steps and tuition
-
 Student Life: Explore clubs, events, and news (use filter buttons)
 
 Registration: Submit your application
